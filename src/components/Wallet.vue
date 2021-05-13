@@ -30,7 +30,7 @@
       <div
         :class="[
           'buttons__item',
-          { 'buttons__item--card': paymentMethod === 1 },
+          { 'buttons__item--card': paymentMethod === 1 }
         ]"
         @click="changePaymentMethod(0)"
       >
@@ -39,7 +39,7 @@
       <div
         :class="[
           'buttons__item',
-          { 'buttons__item--card': paymentMethod === 0 },
+          { 'buttons__item--card': paymentMethod === 0 }
         ]"
         @click="changePaymentMethod(1)"
       >
@@ -74,7 +74,7 @@ export default {
         return "Корзина пуста";
       }
       return this.$store.getters["cartCount"];
-    },
+    }
   },
 
   methods: {
@@ -89,7 +89,7 @@ export default {
 
     changePaymentMethod(method) {
       this.$store.dispatch("changePaymentMethod", method);
-    },
-  },
+    }
+  }
 };
 </script>
