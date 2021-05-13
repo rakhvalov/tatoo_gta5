@@ -1,0 +1,128 @@
+.modal {
+  background: #0d0d0d;
+  border-radius: 0.276692rem;
+  position: fixed;
+  right: 0.45rem;
+  top: 26%;
+  width: 36.5%;
+  overflow: hidden;
+
+  &-head {
+    background: #161616;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 2rem;
+    padding: 0 0.58rem 0 0.62rem;
+    &::after {
+      content: "";
+      background-image: url("~@/assets/img/modal-dots.svg");
+      background-size: cover;
+      width: 1.15rem;
+      height: 1.15rem;
+      position: absolute;
+      top: 0.03rem;
+      right: -0.14rem;
+      z-index: -1;
+    }
+  }
+
+  &-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #262626;
+    border-radius: 0.276692rem;
+    width: 1.03rem;
+    height: 1.03rem;
+    cursor: pointer;
+    img {
+      object-fit: contain;
+      width: 0.38rem;
+      height: 0.38rem;
+    }
+  }
+
+  &-title {
+    display: block;
+    font-weight: 600;
+    font-size: 0.37435rem;
+    line-height: 0.38rem;
+    color: #fff;
+    position: relative;
+    padding-left: 0.2rem;
+    &::before {
+      content: "";
+      width: 0.14rem;
+      height: 0.14rem;
+      border-radius: 100%;
+      background: linear-gradient(90deg, #ae760b 0%, #c9a034 100%);
+      box-shadow: 0px 0px 4px rgba(201, 160, 52, 0.47);
+      position: absolute;
+      left: -0.14rem;
+      top: 0.13rem;
+    }
+  }
+
+  &-body {
+    padding: 0.46rem 0.42rem 0.42rem 0.42rem;
+  }
+
+  &-place {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #161616;
+    color: #fff;
+    font-weight: 600;
+    height: 1.15rem;
+    font-size: 0.3rem;
+    margin-bottom: 0.6rem;
+    border-radius: 0.276692rem;
+  }
+
+  &-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-bottom: 0.276692rem;
+  }
+
+  &-owner {
+    &__label {
+      font-size: 0.22rem;
+      line-height: 0.3rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 0.22rem;
+    }
+    &__name {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.32rem;
+      border: 2px dashed #161616;
+      height: 1.15rem;
+      border-radius: 0.276692rem;
+    }
+  }
+
+  &-button {
+    &.w100 {
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+    }
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    background: linear-gradient(90deg, #ae760b 0%, #c9a034 100%);
+    font-size: 0.32rem;
+    line-height: 0.34rem;
+    font-weight: 600;
+    color: white;
+    height: 1.15rem;
+    border-radius: 0.276692rem;
+  }
+}
