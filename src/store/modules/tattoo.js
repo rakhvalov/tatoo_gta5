@@ -10,19 +10,19 @@ const state = () => ({
         {
           id: 0,
           name: "Не Морской череп",
-          price: 5000,
+          price: 5000
         },
         {
           id: 1,
           name: "Морской череп1",
-          price: 5000,
+          price: 5000
         },
         {
           id: 3,
           name: "Морской череп2",
-          price: 5000,
-        },
-      ],
+          price: 5000
+        }
+      ]
     },
     {
       id: 1,
@@ -32,19 +32,19 @@ const state = () => ({
         {
           id: 4,
           name: "Морской череп3",
-          price: 5000,
+          price: 5000
         },
         {
           id: 5,
           name: "Морской череп4",
-          price: 5000,
+          price: 5000
         },
         {
           id: 6,
           name: "Морской череп5",
-          price: 5000,
-        },
-      ],
+          price: 5000
+        }
+      ]
     },
     {
       id: 2,
@@ -54,33 +54,33 @@ const state = () => ({
         {
           id: 6,
           name: "Lorem ipsum2",
-          price: 59000,
+          price: 59000
         },
         {
           id: 7,
           name: "Lorem ipsum3",
-          price: 12000,
+          price: 12000
         },
         {
           id: 8,
           name: "Морской череп6",
-          price: 7000,
-        },
-      ],
-    },
-  ],
+          price: 7000
+        }
+      ]
+    }
+  ]
 });
 
 const getters = {
   tattooCategories: (state) => state.categories,
   tattooStep: (state) => state.step,
-  currentCat: (state) => state.tattoCurrentCat || [],
+  currentCat: (state) => state.tattoCurrentCat || []
 };
 
 const actions = {
   changeStep({ commit }, data) {
     commit("CHANGE_STEP", data);
-  },
+  }
 };
 
 const mutations = {
@@ -91,12 +91,12 @@ const mutations = {
       return;
     }
     state.tattoCurrentCat = state.categories[data.id].elements;
-  },
+  }
 };
 
 export default {
   state,
   getters,
   actions,
-  mutations,
+  mutations
 };
